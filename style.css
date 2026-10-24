@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263247;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    background: #172554;
+    padding: 25px 16px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin: 0 0 35px;
+}
+
+.sidebar h2 span {
+    color: #5eead4;
+}
+
+.sidebar a {
+    display: block;
+    padding: 13px;
+    margin: 7px 0;
+    color: #dbeafe;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #334477;
+    color: white;
+}
+
+.main {
+    margin-left: 240px;
+}
+
+.topbar {
+    background: white;
+    padding: 23px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.content {
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.card,
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 22px;
+}
+
+.card p {
+    color: #718096;
+}
+
+.card h2 {
+    font-size: 30px;
+    color: #3157d5;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #d4dce8;
+    border-radius: 7px;
+}
+
+button,
+.actions a {
+    display: inline-block;
+    padding: 12px 16px;
+    margin-top: 18px;
+    background: #3157d5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.message {
+    padding: 12px;
+    background: #e6f8ee;
+    color: #176a4b;
+    border-radius: 7px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #f0f4fa;
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 18px;
+    }
+}
